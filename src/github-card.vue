@@ -1,7 +1,7 @@
 <template>
   <div v-if="user" class="m-5 card card-side bg-base-100 shadow-xl">
     <figure>
-      <img src="https://avatars.githubusercontent.com/u/158302526?v=4" alt="Avatar" />
+      <img :src="user.avatar_url" alt="Avatar Image" />
     </figure>
     <div class="card-body">
       <h2 class="card-title">{{ username }}</h2>
@@ -10,7 +10,7 @@
         {{ user.following }}
       </p>
       <div class="card-actions justify-end">
-        <a href="https://github.com/ErikMT24" class="btn btn-primary">Ver perfil</a>
+        <a href="user.html_url" class="btn btn-primary">Ver perfil</a>
       </div>
     </div>
   </div>
@@ -26,7 +26,7 @@ const props = defineProps({
   }
 })
 // fetching data
-fetch(`https://api.github.com/users/ErikMT24/${props.username}`)
+fetch(`https://api.github.com/users/${props.username}`)
   .then(async (res) => {
     user.value = await res.json()
   })

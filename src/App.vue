@@ -4,9 +4,11 @@ import githubCard from './github-card.vue'
 
 <template>
   <div class="">
-    <githubCard username="ErikMt24" />
+    <github-card username="Yampyyii" />
+    <github-card username="rivalcoba" />
+    <github-card username="BrunoPCH" />
+    <github-card username="ErikMT24" />
   </div>
-  <!-- <h1 class="text-3xl font-bold underline">Hola mundo</h1> -->
 </template>
 
 <style scoped></style>
